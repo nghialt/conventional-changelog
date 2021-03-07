@@ -42,4 +42,5 @@ jobs:
         if: ${{ always() }}
         with:
           token: ${{ secrets.CHECK_RUN_REPORTER_TOKEN }}
-          report: '**/reports/ktlint/**/*.xml'
+#          report: '**/build/reports/ktlint/**/*.xml'
+          report: '**/build/test-results/test/TEST-*.xml'
