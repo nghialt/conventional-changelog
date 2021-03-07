@@ -37,9 +37,9 @@ jobs:
         with:
           report_paths: '**/build/test-results/test/TEST-*.xml'
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run check reporter
+      - name: Run Check Reporter
         uses: check-run-reporter/action@v2.0.0
         if: ${{ always() }}
         with:
           token: ${{ secrets.CHECK_RUN_REPORTER_TOKEN }}
-          report: 'reports/ktlint/**/*.xml'
+          report: '**/reports/ktlint/**/*.xml'
